@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "90e897b7-da65-4f55-b43c-1ddcf8821ccd",
+		"name": "TODO APP",
+		"description": "Rest API Collections",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23467693",
+		"_collection_link": "https://www.postman.com/avionics-architect-80265896/workspace/goapps/collection/23467693-90e897b7-da65-4f55-b43c-1ddcf8821ccd?action=share&source=collection_link&creator=23467693"
+	},
+	"item": [
+		{
+			"name": "Check Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/todo/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"todo",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"task2\",\n    \"is_completed\": false,\n    \"time\": \"2023-11-04T15:04:05Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/todo/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"todo",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Tasks File",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/ut/Downloads/task_list.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4000/todo/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"todo",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
